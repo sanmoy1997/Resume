@@ -11,6 +11,27 @@
 
 <style>
 
+#skill .row{
+
+	margin-bottom:10px;
+
+}
+
+
+#skill .pad1 img{
+
+	height:260px;
+
+}
+
+
+.bgc{
+
+	background-color:#000 !important;
+	
+
+}
+
 body{
 
 	background: url("bgmain.jpg");
@@ -143,6 +164,42 @@ body{
 
 
 @media only screen and (min-width:300px) and (max-width :500px){
+
+#skill .col-xs-12{
+
+	margin-bottom:10px;
+
+}
+
+#skill .row{
+
+	margin-bottom:0px !important;
+
+}
+
+.m1{
+
+	font-size:16px !important;
+
+}
+#PES .pad1{
+
+	width:90% !important;
+
+} 
+#skill .pad1{
+
+	width:90% !important;
+
+}
+
+#PES .pad1 ul.m1{
+
+	padding-left: 20px !important;
+	width:90%;
+
+}
+
 .pad2{
 
 	margin-left:40px !important;
@@ -416,6 +473,83 @@ function myFunction() {
   }
 }
 
+$(document).ready(function(){
+  $("#t1").click(function(){
+    
+		$("#home").show();
+		$("#PES").hide();
+		$("#skill").hide();
+		$("#qual").hide();
+	
+  });
+  
+  
+   $("#t2").click(function(){
+    
+		$("#home").hide();
+		$("#PES").show();
+		$("#skill").hide();
+		$("#qual").hide();
+	
+  });
+   $("#t3").click(function(){
+    
+		$("#home").hide();
+		$("#PES").hide();
+		$("#skill").show();
+		$("#qual").hide();
+	
+  });
+    $("#t4").click(function(){
+    
+		$("#home").hide();
+		$("#PES").hide();
+		$("#skill").hide();
+		$("#qual").show();
+	
+  });
+  
+  
+  
+  
+  
+  
+  
+  $(".c1").click(function(){
+    
+		$("#home").show();
+		$("#PES").hide();
+		$("#skill").hide();
+		$("#qual").hide();
+  });
+  
+  
+   $(".c2").click(function(){
+    
+		$("#home").hide();
+		$("#PES").show();
+		$("#skill").hide();
+		$("#qual").hide();
+  });
+   $(".c3").click(function(){
+    
+		$("#home").hide();
+		$("#PES").hide();
+		$("#skill").show();
+		$("#qual").hide();
+	
+  });
+    $(".c4").click(function(){
+    
+		$("#home").hide();
+		$("#PES").hide();
+		$("#skill").hide();
+		$("#qual").show();
+	
+  });
+  
+});
+
 
 </script>
 
@@ -435,20 +569,21 @@ function myFunction() {
 <header>
 <div class="container fs nonmob " style="text-align:right;margin-top:20px;">  
    <ul class="nav nav-pills" style=" padding-bottom: 10px;border-bottom: 1px dotted #fff;">
-    <li class="active" id="t1"><a data-toggle="pill" href="#home">Home</a></li>
-    <li id="t2"><a data-toggle="pill" href="#menu1">Menu 1</a></li>
-    <li id="t3"><a data-toggle="pill" href="#menu2">Menu 2</a></li>
-    <li id="t4"><a data-toggle="pill" href="#menu3">Menu 3</a></li>
+    <li class="active" id="t1"><a data-toggle="pill" href="#home"><i class="fa fa-home" style="font-size:25px;" aria-hidden="true"></i> HOME</a></li>
+    <li id="t2"><a data-toggle="pill" href="#menu1"> <i class="fa fa-laptop" style="font-size:25px;" aria-hidden="true"></i> Experience</a></li>
+    <li id="t3"><a data-toggle="pill" href="#menu2"><i class="fa fa-cogs" style="font-size:25px;" aria-hidden="true"></i> Skills</a></li>
+    <li id="t4"><a data-toggle="pill" href="#menu3"><i class="fa fa-book" style="font-size:25px;" aria-hidden="true"></i> Qualification</a></li>
 	<li id="t5"><a href="resume.docx" download><i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a></li>
   </ul>
  </div> 
  
  <div class="topnav mob" style="display:none;">
-  <a class="c1 active">WELCOME</a>
+  <a class="c1 active"><i class="fa fa-home" aria-hidden="true" style="font-size:25px;"></i> HOME</a>
   <div id="burger">
-    <a class="c2">News</a>
-    <a class="c3">Contact</a>
-    <a  class="c4">About</a>
+    <a class="c2"> <i class="fa fa-laptop" style="font-size:25px;" aria-hidden="true"></i> Experience</a>
+    <a class="c3"><i class="fa fa-cogs" style="font-size:25px;" aria-hidden="true"></i> Skills</a>
+    <a  class="c4"><i class="fa fa-book" style="font-size:25px;" aria-hidden="true"></i> Qualification</a>
+	<a class="c5" href="resume.docx" download><i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
   </div>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -458,7 +593,7 @@ function myFunction() {
  
  <section id="home" class="umrg" >
  
- <div class="col-lg-6 col-md-6 col-xs-12 pad bord">
+ <div class="col-lg-6 col-md-6 col-xs-12 pad ">
  
 	<div class="kk" style="">My Resume</div>
  
@@ -499,7 +634,108 @@ function myFunction() {
  </section>
 
 
-<section id="news">
+<section id="PES" class="umrg" style="display:none;">
+
+	<div class="kk" style="">Professional Experience</div>
+	
+	
+	<div class="pad1" style="text-align:center;margin:20px auto;">
+	
+	<ul style="list-style-type:none;text-align:left; color:#fff">
+	
+	<li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;<span class="spanhead" style=""><b>Organisation:</b></span>&nbsp;<span class="spanbody">TCS</a></span>&nbsp;<a onclick="openTCS()"><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+	<li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;<span class="spanhead" style=""><b>Designation:</b></span>&nbsp;<span class="spanbody">Assistant System Engineer</span></li>
+	<li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;<span class="spanhead" style=""><b>Role:</b></span>&nbsp;<span class="spanbody">Developer</span></li>
+	<li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;<span class="spanhead" style=""><b>Duration:</b></span>&nbsp;<span class="spanbody">June 2019 - Present</span></li>
+	<li><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;<span class="spanhead" style=""><b>Responsibilities:</b></span></li>
+	</ul>
+	<ul class="m1" style="text-align:left; margin-left:10px;color:#000;font-size:20px;">
+	
+	<li>Preparing UI elements for microsite production</li>
+	<li>Making and maintaining device responsiveness for UI elements </li>
+	<li>Preparing dashboards and linking them to back end reports for clients</li>
+	<li>Collaborating with the rest of the engineering team to design and launch new features</li>
+	<li>Deliver regular bug fixes</li>
+	<li>Creating interactive modals to obtain data from end users</li>
+	<li>Delivering sites and microsites which are responsive over all devices</li>
+	<li>Understanding and implementation of security and data protection</li>
+	
+	</ul>
+	
+	</div>
+
+
+
+</section>
+
+
+<section id="skill" class="umrg" style="display:none;">
+
+	<div class="kk" style="">Technical Skills</div>
+
+	<div class="pad1" style="text-align:center;margin:20px auto;">
+	
+			<div class="row">
+			
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="html5.png"/>
+				<br>
+				<span style="color:#000;font-size:25px">HTML 5</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="css.png"/>
+				<br>
+				<span style="color:#000;font-size:25px">CSS</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="js.png"/>
+				<br>
+				<span style="color:#000;font-size:25px">Javascript</span>
+			</div>
+		
+			</div>
+			
+			<div class="row">
+			
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="c.jpg"/>
+				<br>
+				<span style="color:#000;font-size:25px">C</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="java.png"/>
+				<br>
+				<span style="color:#000;font-size:25px">Java</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="cpp.png"/>
+				<br>
+				<span style="color:#000;font-size:25px">C++</span>
+			</div>
+		
+			</div>
+			
+			<div class="row">
+			
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="jquery.png"/ >
+				<br>
+				<span style="color:#000;font-size:25px">JQuery</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="json.png" style="width:100%" />
+				<br>
+				<span style="color:#000;font-size:25px">JSON</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-xs-12">
+				<img src="bootstrap.png" style="width:100%"/>
+				<br>
+				<span style="color:#000;font-size:25px">Bootstrap</span>
+			</div>
+		
+			</div>
+	
+	</div>
 
 
 </section>
@@ -512,10 +748,59 @@ function myFunction() {
 
 
 
+<section id="qual" class="umrg" style="display:none;">
 
-<div class="col-md-12 col-lg-12 col-xs-12 bgc">
 
 
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<div class="col-md-12 col-lg-12 col-xs-12 bgc" style="margin-top:20px;padding:20px;">
+
+	<div style="color:#fff;font-size:16px;text-align:center;margin-bottom:10px;">To Contact Me, Reach me at : </div> 
+	<div class="col-lg-6 col-md-6 col-xs-12">
+	
+		<div class="col-lg-6 col-md-6 col-xs-6" style="text-align:center; margin-bottom:10px;">
+
+		<a href="https://www.linkedin.com/in/sanmoy-saha-391289115"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:50px;color:#fff;"></i></a>
+
+		</div>
+		
+		<div class="col-lg-6 col-md-6 col-xs-6" style="text-align:center;margin-bottom:10px;">
+
+		<a href="mailto:sanmoy66saha@gmail.com"><i class="fa fa-envelope" aria-hidden="true" style="font-size:50px;color:#fff;"></i></a>
+
+		</div>
+	
+	</div>
+	
+	<div class="col-lg-6 col-md-6 col-xs-12">
+	
+		<div class="col-lg-6 col-md-6 col-xs-6" style="text-align:center; margin-bottom:10px;">
+
+		<a href="https://twitter.com/SANMOYSAHA1?s=09"><i class="fa fa-twitter-square" aria-hidden="true" style="font-size:50px;color:#fff;"></i></a>
+
+		</div>
+		
+		<div class="col-lg-6 col-md-6 col-xs-6" style="text-align:center;margin-bottom:10px;">
+
+		<a href="tel:8013403110"><i class="fa fa-mobile" aria-hidden="true" style="font-size:50px;color:#fff;"></i></a>
+
+		</div>
+	
+	</div>
+	<div style="color:#fff;font-size:16px;text-align:center;margin-top:10px;">Made By : Sanmoy Saha <i class="fa fa-copyright" aria-hidden="true"></i></div> 
 
 </div>
 
